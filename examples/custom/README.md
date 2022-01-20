@@ -1,6 +1,6 @@
-# Custom AWS Load Balancer Controller Deployment
+# Custom AWS Fluentd Agent Deployment
 
-Deploy AWS SSM Agent Deployment in Kubernetes Cluster using the customised settings:
+Deploy AWS Fluentd Agent Deployment in Kubernetes Cluster using the customised settings:
 
 
 ## Usage
