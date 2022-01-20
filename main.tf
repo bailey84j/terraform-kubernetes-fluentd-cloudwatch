@@ -54,10 +54,10 @@ resource "kubernetes_config_map" "example" {
   }
 
   data = {
-    "containers.conf" = "${file("${path.module}/fluentd/containers.conf")}"
-    "fluent.conf"     = "${file("${path.module}/fluentd/fluent.conf")}"
-    "host.conf"       = "${file("${path.module}/fluentd/host.conf")}"
-    "systemd.conf"    = "${file("${path.module}/fluentd/systemd.conf")}"
+    "containers.conf" = "${file("${path.module}/templates/containers.conf")}"
+    "fluent.conf"     = "${file("${path.module}/templates/fluent.conf")}"
+    "host.conf"       = "${file("${path.module}/templates/host.conf")}"
+    "systemd.conf"    = "${file("${path.module}/templates/systemd.conf")}"
   }
 
 }
@@ -209,8 +209,7 @@ resource "kubernetes_daemon_set_v1" "this" {
 # region aws iam role
 
 locals {
-  iam_role_name     = coalesce(var.iam_role_name, "${var.eks_cluster_name}-${var.name}")
-  policy_arn_prefix = "arn:${data.aws_partition.current.partition}:iam::aws:policy"
+  iam_role_name = coalesce(var.iam_role_name, "${var.eks_cluster_name}-${var.name}")
 }
 # to be updated
 data "aws_iam_policy_document" "assume_role_policy" {
