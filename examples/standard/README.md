@@ -1,6 +1,6 @@
-# AWS SSM Agent Deployment in Kubernetes Cluster
+# AWS Fluentd Agent Deployment in Kubernetes Cluster
 
-Deploy AWS SSM Agent Deployment in Kubernetes Cluster using the standard settings:
+Deploy AWS Fluentd Agent Deployment in Kubernetes Cluster using the standard settings:
 
 
 ## Usage
