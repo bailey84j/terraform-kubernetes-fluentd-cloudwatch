@@ -2,13 +2,18 @@
 
 Terraform module which deploys Fluentd Cloud Watch Agent
 
-[![Lint Status](https://github.com/bailey84j/terraform-kubernetes-fluentd-cloudwatch/actions/workflows/main.yml/badge.svg)](https://github.com/bailey84j/terraform-kubernetes-fluentd-cloudwatch/actions/workflows/main.yml)
+[![TFLINT](https://github.com/bailey84j/terraform-kubernetes-fluentd-cloudwatch/actions/workflows/main.yml/badge.svg)](https://github.com/bailey84j/terraform-kubernetes-fluentd-cloudwatch/actions/workflows/main.yml)
 [![LICENSE](https://img.shields.io/github/license/bailey84j/terraform-kubernetes-fluentd-cloudwatch)](https://github.com/bailey84j/terraform-kubernetes-fluentd-cloudwatch/blob/master/LICENSE)
+
+---
+
+
 
 
 ## Examples
 
 - [Standard](https://github.com/bailey84j/terraform-kubernetes-fluentd-cloudwatch/tree/master/examples/standard): Deploying Fluentd Cloudwatch Agent using the default settings
+[![Deployment](https://github.com/bailey84j/terraform-kubernetes-fluentd-cloudwatch/actions/workflows/standard-deployment.yml/badge.svg)](https://github.com/bailey84j/terraform-kubernetes-fluentd-cloudwatch/actions/workflows/standard-deployment.yml)
 - [Custom](https://github.com/bailey84j/terraform-kubernetes-fluentd-cloudwatch/tree/master/examples/custom): Customising the deployment to use a different name and namespace 
 
 ## Contributing

@@ -42,22 +42,22 @@
 #       with:
 #         cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
 
-name: 'Terraform'
+name: 'Custom-Deployment'
 
 on:
   workflow_dispatch:
 
 jobs:
   terraform:
-    name: 'Terraform'
+    name: 'Custom-Deployment'
     runs-on: ubuntu-latest
-    environment: production
+    environment: development
 
     # Use the Bash shell regardless whether the GitHub Actions runner is ubuntu-latest, macos-latest, or windows-latest
     defaults:
       run:
         shell: bash
-        working-directory: examples/standard
+        working-directory: examples/custom
 
     steps:
     # Checkout the repository to the GitHub Actions runner
