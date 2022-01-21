@@ -51,7 +51,7 @@ jobs:
   terraform:
     name: 'Custom-Deployment'
     runs-on: ubuntu-latest
-    environment: development
+    environment: Custom-Deployment
 
     # Use the Bash shell regardless whether the GitHub Actions runner is ubuntu-latest, macos-latest, or windows-latest
     defaults:
