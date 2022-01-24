@@ -35,8 +35,8 @@ Full contributing [guidelines are covered here](https://github.com/bailey84j/ter
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | >= 3.63 |
-| <a name="provider_kubernetes"></a> [kubernetes](#provider\_kubernetes) | >= 2.0 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | 3.73.0 |
+| <a name="provider_kubernetes"></a> [kubernetes](#provider\_kubernetes) | 2.7.1 |
 
 ## Modules
 
@@ -51,6 +51,7 @@ No modules.
 | [kubernetes_cluster_role_binding.this](https://registry.terraform.io/providers/hashicorp/kubernetes/latest/docs/resources/cluster_role_binding) | resource |
 | [kubernetes_config_map.example](https://registry.terraform.io/providers/hashicorp/kubernetes/latest/docs/resources/config_map) | resource |
 | [kubernetes_daemon_set_v1.this](https://registry.terraform.io/providers/hashicorp/kubernetes/latest/docs/resources/daemon_set_v1) | resource |
+| [kubernetes_namespace.this](https://registry.terraform.io/providers/hashicorp/kubernetes/latest/docs/resources/namespace) | resource |
 | [kubernetes_service_account.this](https://registry.terraform.io/providers/hashicorp/kubernetes/latest/docs/resources/service_account) | resource |
 | [aws_caller_identity.current](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/caller_identity) | data source |
 | [aws_eks_cluster.target](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/eks_cluster) | data source |
@@ -63,6 +64,7 @@ No modules.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_create_iam_role"></a> [create\_iam\_role](#input\_create\_iam\_role) | Determines whether a an IAM role is created or to use an existing IAM role for the cloudwatch agent | `bool` | `true` | no |
+| <a name="input_create_namespace"></a> [create\_namespace](#input\_create\_namespace) | Determines whether a an IAM role is created or to use an existing IAM role for the cloudwatch agent | `bool` | `true` | no |
 | <a name="input_eks_cluster_name"></a> [eks\_cluster\_name](#input\_eks\_cluster\_name) | The name of the target Kubernetes Cluster | `string` | n/a | yes |
 | <a name="input_iam_role_arn"></a> [iam\_role\_arn](#input\_iam\_role\_arn) | Existing IAM role ARN for the cloudwatch agent. Required if `create_iam_role` is set to `false` | `string` | `null` | no |
 | <a name="input_iam_role_description"></a> [iam\_role\_description](#input\_iam\_role\_description) | Description of the role | `string` | `"Permissions required by the Kubernetes Fluentd to do it's job."` | no |
@@ -74,7 +76,7 @@ No modules.
 | <a name="input_image_name"></a> [image\_name](#input\_image\_name) | The name of the fluentd-cloudwatch container image | `string` | `"fluentd-kubernetes-daemonset"` | no |
 | <a name="input_image_version"></a> [image\_version](#input\_image\_version) | The name of the fluentd-cloudwatch container image version | `string` | `"v1.14.3-debian-cloudwatch-1.0"` | no |
 | <a name="input_name"></a> [name](#input\_name) | The name of the fluentd deployment | `string` | `"fluentd"` | no |
-| <a name="input_namespace"></a> [namespace](#input\_namespace) | The name of the fluentd deployment | `string` | `"kube-system"` | no |
+| <a name="input_namespace"></a> [namespace](#input\_namespace) | The namespace to put the fluentd deployment in | `string` | `"kube-system"` | no |
 | <a name="input_prefix_separator"></a> [prefix\_separator](#input\_prefix\_separator) | The separator to use between the prefix and the generated timestamp for resource names | `string` | `"-"` | no |
 | <a name="input_tags"></a> [tags](#input\_tags) | A map of tags to add to all resources | `map(string)` | `{}` | no |
 
