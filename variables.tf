@@ -20,8 +20,14 @@ variable "name" {
 
 }
 
+variable "create_namespace" {
+  description = "Determines whether a an IAM role is created or to use an existing IAM role for the cloudwatch agent"
+  type        = bool
+  default     = true
+}
+
 variable "namespace" {
-  description = "The name of the fluentd deployment"
+  description = "The namespace to put the fluentd deployment in"
   type        = string
   default     = "kube-system"
 
@@ -40,6 +46,8 @@ variable "image_version" {
   default     = "v1.14.3-debian-cloudwatch-1.0"
 
 }
+
+
 
 ################################################################################
 # IAM Role Variables

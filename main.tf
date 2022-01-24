@@ -1,4 +1,11 @@
 # region Kubernetes Resources
+resource "kubernetes_namespace" "this" {
+  count = var.create_namespace && var.namespace != "kube-system" ? 1 : 0
+  metadata {
+    name = var.namespace
+  }
+}
+
 # Referencing
 # https://github.com/aws-samples/amazon-cloudwatch-container-insights/blob/master/k8s-yaml-templates/quickstart/cwagent-fluentd-quickstart.yaml
 # Line 185
