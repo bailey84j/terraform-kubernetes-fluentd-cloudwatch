@@ -28,6 +28,8 @@ module "k8s_fluentd" {
 
   eks_cluster_name = local.k8s_cluster_name
 
+  create_namespace = true
+
   name = "different-app-name"
 
   namespace = "different-namespace"
