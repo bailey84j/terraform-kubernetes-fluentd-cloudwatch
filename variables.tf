@@ -23,7 +23,7 @@ variable "name" {
 variable "create_namespace" {
   description = "Determines whether a an IAM role is created or to use an existing IAM role for the cloudwatch agent"
   type        = bool
-  default     = true
+  default     = false
 }
 
 variable "namespace" {
