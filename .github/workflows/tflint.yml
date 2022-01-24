@@ -1,4 +1,4 @@
-name: TFLINT
+name: tflint
 
 # Controls when the workflow will run
 on:
