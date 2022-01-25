@@ -7,7 +7,7 @@ on:
     paths:
       - '**.tf'
       - '**.tfvars'
-      - '!examples/**'
+      #- '!examples/**'
   pull_request:
     branches: [ main ]
 
@@ -40,11 +40,30 @@ jobs:
       - name: Run TFLint
         run: tflint -f compact
         
-      - name: Render terraform docs and push changes back to PR
+      - name: Render terraform docs and push changes back to PR - module
         uses: terraform-docs/gh-actions@main
         with:
           working-dir: .
           output-file: README.md
           output-method: inject
           git-push: "true"
+          git-commit-message: "docs: terraform-docs: automated action - module"
+
+      - name: Render terraform docs and push changes back to PR - examples/standard
+        uses: terraform-docs/gh-actions@main
+        with:
+          working-dir: examples/standard
+          output-file: README.md
+          output-method: inject
+          git-push: "true"
+          git-commit-message: "docs: terraform-docs: automated action - examples/standard"
+      
+      - name: Render terraform docs and push changes back to PR - examples/custom
+        uses: terraform-docs/gh-actions@main
+        with:
+          working-dir: examples/custom
+          output-file: README.md
+          output-method: inject
+          git-push: "true"
+          git-commit-message: "docs: terraform-docs: automated action - examples/custom"
         
