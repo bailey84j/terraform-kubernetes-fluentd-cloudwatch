@@ -2,7 +2,7 @@
 
 Terraform module which deploys Fluentd Cloud Watch Agent
 
-[![tflint](https://github.com/bailey84j/terraform-kubernetes-fluentd-cloudwatch/actions/workflows/main.yml/badge.svg)](https://github.com/bailey84j/terraform-kubernetes-fluentd-cloudwatch/actions/workflows/main.yml)
+[![tflint](https://github.com/bailey84j/terraform-kubernetes-fluentd-cloudwatch/actions/workflows/tflint.yml/badge.svg)](https://github.com/bailey84j/terraform-kubernetes-fluentd-cloudwatch/actions/workflows/tflint.yml)
 [![LICENSE](https://img.shields.io/github/license/bailey84j/terraform-kubernetes-fluentd-cloudwatch)](https://github.com/bailey84j/terraform-kubernetes-fluentd-cloudwatch/blob/master/LICENSE)
 [![Terraform](https://img.shields.io/badge/tf->%3D0.14.8-blue.svg)](https://www.terraform.io/downloads)
 
